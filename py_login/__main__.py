@@ -13,7 +13,5 @@ class Home():
         self.home.mainloop()
 
 
-あああああああああああああああああああああ
-
 if __name__ == "__main__":
     main()
