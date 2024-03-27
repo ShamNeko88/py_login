@@ -22,9 +22,10 @@ def main():
 """
 class App(tk.Frame):
     def __init__(self, master=None):
-        super().__init__(master, bg="gray")
-        self.master = master # 親インスタンス
+        super().__init__(master, bg="gray", width= 200, height=200, borderwidth=1, relief="groove")
         self.pack()
+        self.propagate(0)
+        self.master = master # 親インスタンス
         self.widgets(self) # ウィジェット配置
 
     def widgets(self, master):
