@@ -27,10 +27,24 @@ class App(tk.Frame):
         self.propagate(0)
         self.master = master # 親インスタンス
         self.widgets(self) # ウィジェット配置
+        self.home = Home(self)
 
     def widgets(self, master):
         self.txt = ttk.Label(master, text="アプリフレーム")
         self.txt.pack()
+
+class Home(tk.Frame):
+    def __init__(self, master=None):
+        super().__init__(master, bg="skyblue", width= 100, height=100, borderwidth=1, relief="groove")
+        self.pack()
+        self.propagate(0)
+        self.master = master # 親インスタンス
+        self.widgets(self) # ウィジェット配置
+
+    def widgets(self, master):
+        self.txt = ttk.Label(master, text="Homeフレーム")
+        self.txt.pack()
+
 
 if __name__ == "__main__":
     main()
